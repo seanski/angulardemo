@@ -36,6 +36,11 @@ gem 'angularjs-rails'
 gem 'angularjs-rails-resource', '~> 0.2.0'
 gem 'angular-ui-bootstrap-rails'
 
+gem 'devise'
+gem 'cancan'
+
+gem 'sugar-rails'
+
 gem 'pry-rails'
 gem 'pry-debugger'
 gem 'pry-doc'
