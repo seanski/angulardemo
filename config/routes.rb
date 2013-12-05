@@ -9,6 +9,7 @@ Angulardemo::Application.routes.draw do
   root 'home#index'
 
   namespace :api do
+    devise_for :users, controllers: { registrations: 'api/registrations', sessions: 'api/sessions' }
     resources :todo_items
   end  
   
