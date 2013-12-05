@@ -1,28 +1,2 @@
 div ng-app="AngularDemo"
-  div ng-controller="TodoController"
-    form
-      label Description
-      input type="text" ng-model="selectedItem.description"
-      br
-      label Due Date
-      input type="text" ng-model="selectedItem.dueDate"
-      br
-      button ng-click="save()" Save
-      button ng-click="new()" New
-
-    table
-      thead
-        tr 
-          th Description
-          th Due Date
-          th Completed
-      tbody
-        tr ng-repeat="todoItem in todoItems" ng-click="setSelectedItem(todoItem)"
-          td ng-bind="todoItem.description" 
-          td ng-bind="todoItem.dueDate"
-          td 
-            input type="checkbox" ng-model="todoItem.completed" ng-change="changeStatus(todoItem)"
-
-
-
-
+  div ng-view=""
