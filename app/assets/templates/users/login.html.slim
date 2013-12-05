@@ -1,0 +1,11 @@
+form.form-horizontal
+  .form-group
+    label.col-sm-2.control-label Email      
+    .col-sm-10
+      input.form-control type="text" ng-model="user.email" placeholder="Email"
+  .form-group
+    label.col-sm-2.control-label Password
+    .col-sm-10
+      input.form-control type="password" ng-model="user.password" placeholder="Password"
+  .col-sm-offset-2
+    button.btn.btn-primary ng-click="login(user)" Login

@@ -1,0 +1,26 @@
+#todos
+  form.form-horizontal
+    .form-group
+      label.col-sm-2.control-label Description      
+      .col-sm-10
+        input.form-control type="text" ng-model="selectedItem.description" placeholder="Description"
+    .form-group
+      label.col-sm-2.control-label Due Date
+      .col-sm-10
+        input.form-control type="text" ng-model="selectedItem.dueDate" placeholder="Due Date"
+    .col-sm-offset-2
+      button.btn.btn-default ng-click="new()" New
+      button.btn.btn-primary ng-click="save(selectedItem)" Save
+
+  table.table.table-striped.table-hover
+    thead
+      tr 
+        th Description
+        th Due Date
+        th Completed
+    tbody
+      tr ng-repeat="todoItem in todoItems | orderBy: 'dueDate' | filter: 'completed' == true" ng-click="setSelectedItem(todoItem)" ad-strike="todoItem.completed" ad-warn="todoItem.dueDate" 
+        td ng-bind="todoItem.description" 
+        td ng-bind="todoItem.dueDate"
+        td 
+          input type="checkbox" ng-model="todoItem.completed" ng-change="save(todoItem)"
