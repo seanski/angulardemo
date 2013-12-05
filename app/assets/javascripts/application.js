@@ -17,4 +17,5 @@
 //= require twitter/bootstrap
 //= require angular-ui-bootstrap
 //= require angular-ui-bootstrap-tpls
+//= require sugar
 //= require_tree .
